@@ -22,6 +22,10 @@
     "test:integration": "node scripts/test.js -- test/integration",
     "lint": "node scripts/lint.js"
   },
+  "dependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6"
+  },
   "keywords": [
     "recruitment",
     "ai",

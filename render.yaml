@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: talentrivox-api
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node apps/api/dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
