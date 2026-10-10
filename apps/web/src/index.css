@@ -1,0 +1,587 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --color-primary: #17362D;
+    --color-primary-strong: #11231D;
+    --color-primary-hover: #24483B;
+    --color-accent-lime: #C4E65D;
+    --color-emerald: #347B60;
+    --color-muted-sage: #DCE9DF;
+    --color-soft-sage: #E8EEE6;
+
+    --color-background: #F5F5EE;
+    --color-surface: #FFFFFF;
+    --color-surface-card: #FFFFFF;
+    --color-surface-elevated: #FFFFFF;
+
+    --color-text: #26372F;
+    --color-text-heading: #17362D;
+    --color-text-secondary: #47584F;
+    --color-text-muted: #68766D;
+    --color-border: #D9E2D9;
+    --color-border-subtle: #E8EEE6;
+
+    --radius-control: 10px;
+    --radius-card: 16px;
+    --radius-panel: 24px;
+
+    --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --color-primary: #58A581;
+    --color-primary-strong: #78C4A0;
+    --color-primary-hover: #488E6D;
+    --color-accent-lime: #C4E65D;
+    --color-emerald: #347B60;
+    --color-muted-sage: #82998C;
+    --color-soft-sage: #1A2E26;
+
+    --color-background: #0F1D17;
+    --color-surface: #162720;
+    --color-surface-card: #1A2E26;
+    --color-surface-elevated: #1E352C;
+
+    --color-text: #F4F5EE;
+    --color-text-heading: #FFFFFF;
+    --color-text-secondary: #DDE7DF;
+    --color-text-muted: #9BB0A4;
+    --color-border: #24483B;
+    --color-border-subtle: #1A3028;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .dark body {
+    background-color: #0F1D17;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Newsreader', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* TalentrivoX AI Editorial SaaS Surfaces & Cards */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE5DC;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(23, 54, 45, 0.04), 0 1px 2px -1px rgba(23, 54, 45, 0.02);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark .editorial-card {
+  background-color: #162720;
+  border-color: #2B453A;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.editorial-card-hover {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE5DC;
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px 0 rgba(23, 54, 45, 0.04);
+}
+
+.dark .editorial-card-hover {
+  background-color: #162720;
+  border-color: #2B453A;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.editorial-card-hover:hover {
+  border-color: #24483B;
+  box-shadow: 0 8px 24px -4px rgba(23, 54, 45, 0.09);
+  transform: translateY(-1px);
+}
+
+.dark .editorial-card-hover:hover {
+  border-color: #58A581;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+}
+
+.editorial-input {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE5DC;
+  color: #26372F;
+  transition: all 0.15s ease;
+}
+
+.editorial-input::placeholder {
+  color: #7A8B82;
+}
+
+.dark .editorial-input {
+  background-color: #1E352C;
+  border-color: #2B453A;
+  color: #FFFFFF;
+}
+
+.dark .editorial-input::placeholder {
+  color: #82998C;
+}
+
+.editorial-input:focus {
+  border-color: #24483B;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(36, 72, 59, 0.2);
+}
+
+.dark .editorial-input:focus {
+  border-color: #58A581;
+  box-shadow: 0 0 0 2px rgba(88, 165, 129, 0.3);
+}
+
+.editorial-sidebar {
+  background-color: #F7F6F0;
+  border-right: 1px solid #DFE5DC;
+}
+
+.dark .editorial-sidebar {
+  background-color: #0F1D17;
+  border-right-color: #2B453A;
+}
+
+.editorial-header {
+  background-color: rgba(20, 44, 37, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #24483B;
+  color: #F4F5EE;
+}
+
+.dark .editorial-header {
+  background-color: rgba(15, 29, 23, 0.95);
+  border-bottom-color: #24483B;
+  color: #F4F5EE;
+}
+
+/* Dark Header & Footer Component Utilities */
+.tale-dark-header {
+  background-color: rgba(17, 35, 29, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #24483B;
+  color: #F4F5EE;
+}
+
+.tale-dark-footer {
+  background-color: #11231D;
+  border-top: 1px solid #24483B;
+  color: #DCE9DF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5EE;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0F1D17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9E2D9;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #24483B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8BDAF;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #4B6354;
+}
+
+/* Accessible focus visible */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #24483B;
+  outline-offset: 2px;
+}
+
+.dark button:focus-visible, .dark a:focus-visible, .dark input:focus-visible, .dark select:focus-visible, .dark textarea:focus-visible {
+  outline-color: #58A581;
+}
+
+/* =========================================================================
+   TALEHIRE-INSPIRED ART DIRECTION & COMPONENT UTILITIES
+   ========================================================================= */
+
+/* Hero Glow Ambience */
+.tale-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.15;
+  background: radial-gradient(circle, #24483B 0%, #10B981 50%, transparent 70%);
+}
+
+.dark .tale-hero-glow {
+  opacity: 0.25;
+  background: radial-gradient(circle, #10B981 0%, #0F2D24 50%, transparent 70%);
+}
+
+/* TaleHire Style Online Pulse Badge */
+.tale-badge-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #FFFFFF;
+  color: #24483B;
+  border: 1px solid #DFE5DC;
+  box-shadow: 0 1px 3px rgba(23, 54, 45, 0.05);
+}
+
+.dark .tale-badge-pulse {
+  background-color: #162720;
+  color: #A7F3D0;
+  border-color: #2B453A;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.tale-badge-pulse::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.3);
+  }
+}
+
+/* TaleHire Style Floating Layered Preview Card */
+.tale-card-floating {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE5DC;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 32px -4px rgba(23, 54, 45, 0.1), 0 4px 12px -2px rgba(23, 54, 45, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .tale-card-floating {
+  background-color: #162720;
+  border-color: #2B453A;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.7), 0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+.tale-card-floating:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -6px rgba(23, 54, 45, 0.14), 0 8px 16px -4px rgba(23, 54, 45, 0.08);
+}
+
+.dark .tale-card-floating:hover {
+  box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.85), 0 0 28px rgba(16, 185, 129, 0.15);
+}
+
+/* TaleHire Match Score Pill & Bubble */
+.tale-score-bubble {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, rgba(36, 72, 59, 0.1) 0%, rgba(16, 185, 129, 0.15) 100%);
+  color: #17362D;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.dark .tale-score-bubble {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(196, 230, 93, 0.12) 100%);
+  color: #A7F3D0;
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+/* Match Bar Progress */
+.tale-match-bar {
+  background-color: #DFE5DC;
+  border-radius: 9999px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.dark .tale-match-bar {
+  background-color: #2B453A;
+}
+
+.tale-match-fill {
+  background: linear-gradient(90deg, #24483B 0%, #10B981 100%);
+  border-radius: 9999px;
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .tale-match-fill {
+  background: linear-gradient(90deg, #10B981 0%, #C4E65D 100%);
+}
+
+/* TaleHire Glass Pill */
+.tale-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #F7F6F0;
+  color: #26372F;
+  border: 1px solid #DFE5DC;
+  transition: all 0.2s ease;
+}
+
+.dark .tale-pill {
+  background-color: #1A2E26;
+  color: #DDE7DF;
+  border-color: #2B453A;
+}
+
+.tale-pill:hover {
+  border-color: #24483B;
+  color: #17362D;
+}
+
+.dark .tale-pill:hover {
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+/* TaleHire Serif Italic Power Accent */
+.tale-serif-italic {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* TaleHire Handwritten Note/Annotation Accent */
+.tale-handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* =========================================================================
+   TALENTRIVOX AI AMBIENT BACKGROUNDS, FLOATING BUBBLES & MOTION SYSTEM
+   ========================================================================= */
+
+/* Ambient Canvas Backgrounds */
+.tale-ambient-bg {
+  position: relative;
+  background-color: #F5F5EE;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(23, 54, 45, 0.04) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(52, 123, 96, 0.04) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(196, 230, 93, 0.02) 0px, transparent 50%);
+}
+
+.dark .tale-ambient-bg {
+  background-color: #0F1D17;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(47, 128, 100, 0.12) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, rgba(20, 44, 37, 0.4) 0px, transparent 60%),
+    radial-gradient(at 50% 100%, rgba(145, 217, 182, 0.06) 0px, transparent 60%);
+}
+
+/* Bubble Layer Container */
+.tale-bubble-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient Floating Keyframes */
+@keyframes tale-float-1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  33% {
+    transform: translateY(-18px) translateX(12px) scale(1.04);
+  }
+  66% {
+    transform: translateY(-8px) translateX(-10px) scale(0.97);
+  }
+}
+
+@keyframes tale-float-2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  33% {
+    transform: translateY(14px) translateX(-16px) scale(0.96);
+  }
+  66% {
+    transform: translateY(-12px) translateX(8px) scale(1.03);
+  }
+}
+
+@keyframes tale-float-3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-24px) translateX(16px) scale(1.06);
+  }
+}
+
+@keyframes tale-pulse-slow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+/* Floating Bubble Variations */
+.tale-bubble {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.tale-bubble-emerald {
+  background: radial-gradient(circle, rgba(47, 128, 100, 0.18) 0%, rgba(36, 72, 59, 0.05) 70%, transparent 100%);
+  filter: blur(28px);
+}
+
+.dark .tale-bubble-emerald {
+  background: radial-gradient(circle, rgba(47, 128, 100, 0.28) 0%, rgba(20, 44, 37, 0.1) 70%, transparent 100%);
+  filter: blur(32px);
+}
+
+.tale-bubble-mint {
+  background: radial-gradient(circle, rgba(145, 217, 182, 0.22) 0%, rgba(220, 233, 223, 0.08) 70%, transparent 100%);
+  filter: blur(24px);
+}
+
+.dark .tale-bubble-mint {
+  background: radial-gradient(circle, rgba(145, 217, 182, 0.18) 0%, rgba(31, 64, 52, 0.05) 70%, transparent 100%);
+  filter: blur(30px);
+}
+
+.tale-bubble-lime {
+  background: radial-gradient(circle, rgba(196, 230, 93, 0.2) 0%, rgba(196, 230, 93, 0.02) 70%, transparent 100%);
+  filter: blur(20px);
+}
+
+.dark .tale-bubble-lime {
+  background: radial-gradient(circle, rgba(196, 230, 93, 0.15) 0%, transparent 70%);
+  filter: blur(24px);
+}
+
+.tale-bubble-sage {
+  background: radial-gradient(circle, rgba(220, 233, 223, 0.5) 0%, rgba(247, 246, 240, 0.1) 70%, transparent 100%);
+  filter: blur(36px);
+}
+
+.dark .tale-bubble-sage {
+  background: radial-gradient(circle, rgba(26, 48, 40, 0.45) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.tale-bubble-ring {
+  border: 1.5px solid rgba(47, 128, 100, 0.18);
+  background: radial-gradient(circle, rgba(145, 217, 182, 0.04) 0%, transparent 80%);
+}
+
+.dark .tale-bubble-ring {
+  border: 1.5px solid rgba(145, 217, 182, 0.22);
+  background: radial-gradient(circle, rgba(47, 128, 100, 0.08) 0%, transparent 80%);
+}
+
+/* Bubble Animation Utilities */
+.tale-anim-float-1 {
+  animation: tale-float-1 18s ease-in-out infinite;
+}
+
+.tale-anim-float-2 {
+  animation: tale-float-2 24s ease-in-out infinite;
+}
+
+.tale-anim-float-3 {
+  animation: tale-float-3 20s ease-in-out infinite;
+}
+
+.tale-anim-pulse {
+  animation: tale-pulse-slow 10s ease-in-out infinite;
+}
+
+/* Reduced Motion Override for Accessibility & Performance */
+@media (prefers-reduced-motion: reduce) {
+  .tale-anim-float-1,
+  .tale-anim-float-2,
+  .tale-anim-float-3,
+  .tale-anim-pulse,
+  .tale-badge-pulse::before {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Glassmorphism Auth / Card Surface */
+.tale-glass-card {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 229, 220, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(23, 54, 45, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.dark .tale-glass-card {
+  background-color: rgba(22, 39, 32, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(43, 69, 58, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(88, 165, 129, 0.1) inset;
+}

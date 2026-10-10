@@ -1,0 +1,35 @@
+{
+  "name": "ai-resume-screening-and-interview-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise AI Resume Screening & Interview Agent - Team AvengerCoders",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:api": "node scripts/dev-api.js",
+    "dev:web": "node scripts/dev-web.js",
+    "build": "node scripts/build.js",
+    "build:shared": "node scripts/build.js",
+    "build:api": "node scripts/build.js",
+    "build:web": "node scripts/build.js",
+    "typecheck": "node scripts/typecheck.js",
+    "test": "node scripts/test.js",
+    "test:unit": "node scripts/test.js -- test/unit",
+    "test:integration": "node scripts/test.js -- test/integration",
+    "lint": "node scripts/lint.js"
+  },
+  "keywords": [
+    "recruitment",
+    "ai",
+    "resume-screening",
+    "interview-agent",
+    "gemini",
+    "full-stack"
+  ],
+  "author": "Team AvengerCoders",
+  "license": "MIT"
+}

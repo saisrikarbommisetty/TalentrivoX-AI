@@ -1,0 +1,36 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 673 >>
+stream
+BT
+/F1 12 Tf
+72 712 Td
+(Elena Rostova) Tj T* (Email: elena.rostova@engineer.org | Phone: \(206\) 555-0188 | Seattle, WA) Tj T* () Tj T* (SUMMARY) Tj T* (Junior Software Developer with foundational knowledge in JavaScript and Python. Eager to contribute to web projects.) Tj T* () Tj T* (TECHNICAL SKILLS) Tj T* (Languages: JavaScript, Python, HTML5, CSS3) Tj T* (Tools: Git, GitHub, VS Code, Linux) Tj T* () Tj T* (PROJECTS) Tj T* (Task Manager App: Built a personal task organizer using vanilla JavaScript and LocalStorage.) Tj T* (Portfolio Website: Designed and deployed a responsive personal portfolio on GitHub Pages.) Tj T* () Tj T* (EDUCATION) Tj T* (B.S. in Information Systems - University of Washington \(2023\) ) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000059 00000 n 
+0000000116 00000 n 
+0000000224 00000 n 
+0000000375 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+460
+%%EOF

@@ -1,0 +1,36 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1442 >>
+stream
+BT
+/F1 12 Tf
+72 712 Td
+(Sarah Chen) Tj T* (Email: sarah.chen@techmail.io | Phone: \(415\) 555-0192 | San Francisco, CA) Tj T* () Tj T* (SUMMARY) Tj T* (Principal Full-Stack Engineer with 7+ years of experience architecting high-scale web platforms using TypeScript, React, and Node.js. Passionate about database optimization and engineering mentorship.) Tj T* () Tj T* (TECHNICAL SKILLS) Tj T* (Languages & Frameworks: TypeScript, JavaScript, React, Next.js, Node.js, Express, Fastify, GraphQL, Tailwind CSS) Tj T* (Databases & Cloud: PostgreSQL, Redis, Docker, Kubernetes, AWS \(ECS, Lambda, S3, RDS\), CI/CD, GitHub Actions) Tj T* (Practices: System Design, Microservices, Relational Data Modeling, Unit Testing, Agile Leadership) Tj T* () Tj T* (EXPERIENCE) Tj T* (Staff Engineer - CloudScale Inc \(2021 - Present\)) Tj T* (- Architected enterprise React and TypeScript dashboards serving 200k daily active users.) Tj T* (- Designed PostgreSQL database schemas, indexing strategies, and automated migrations that reduced p99 latency by 45%.) Tj T* (- Led cross-functional team of 6 engineers, conducted code reviews, and established engineering onboarding playbooks.) Tj T* () Tj T* (Senior Backend Engineer - Apex Data Labs \(2018 - 2021\)) Tj T* (- Built high-throughput Node.js microservices handling 15,000 requests per second.) Tj T* (- Containerized development workflows using Docker and configured automated CI/CD deployment pipelines.) Tj T* () Tj T* (EDUCATION) Tj T* (B.S. in Computer Science - University of California, Berkeley \(2018\) ) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000059 00000 n 
+0000000116 00000 n 
+0000000224 00000 n 
+0000000375 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+460
+%%EOF
